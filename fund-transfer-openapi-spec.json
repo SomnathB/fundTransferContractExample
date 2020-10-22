@@ -1,0 +1,125 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "New API",
+        "version": "1.0.0",
+        "description": "For solving a problem!"
+    },
+    "paths": {
+        "/fund/v1/transfer": {
+            "summary": "Transfer fund  within bank accounts",
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "parameters": [
+                    {
+                        "name": "fromBankAccNum",
+                        "description": "",
+                        "schema": {
+                            "type": "number"
+                        },
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "fromBankName",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "fromBankIFSCCode",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "Amount",
+                        "description": "",
+                        "schema": {
+                            "type": "number"
+                        },
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "toBankName",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "query"
+                    },
+                    {
+                        "name": "toBankIFSCCode",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "toBankAccNum",
+                        "description": "",
+                        "schema": {
+                            "type": "number"
+                        },
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "Token",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "name": "transferDate",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "deviceID",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "requestorID",
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "query",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    }
+}
